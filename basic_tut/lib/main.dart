@@ -1,9 +1,10 @@
 import 'package:basic_tut/pages/home_page.dart';
 import 'package:basic_tut/pages/login_page.dart';
 import 'package:basic_tut/utils/routes.dart';
+import 'package:basic_tut/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -18,16 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // home: HomePage(),
       themeMode: ThemeMode.light, //first declare theme
-      theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
-          fontFamily: GoogleFonts.lato().fontFamily,
-           // adjust all types of widget according to given color
-          ),
-          debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData(
-        //then intilize how do you want your theme to be and return to themeMode
-        brightness: Brightness.dark,
-      ),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
+      debugShowCheckedModeBanner: false,
       initialRoute: Myroutes.homeRoute, //to use which route at the start of the app
       routes: {
         "/": (context) =>
