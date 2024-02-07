@@ -1,3 +1,4 @@
+import 'package:basic_tut/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,14 +12,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
          title: Text("Catalog App"),
+         backgroundColor: Color.fromARGB(255, 145, 36, 203),
       ),
-        
+                          
         body: Center(
           child: Container(
             child: Text("Welcome to $days days of flutter by $name"),
           ),
         ),
-        drawer: Drawer(),
+        drawer: MyDrawer(),
       );
   }
 // @required is used to make something mandatory 

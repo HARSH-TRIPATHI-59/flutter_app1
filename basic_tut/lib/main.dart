@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         //then intilize how do you want your theme to be and return to themeMode
         brightness: Brightness.dark,
       ),
-      initialRoute: "/", //to use which route at the start of the app
+      initialRoute: Myroutes.homeRoute, //to use which route at the start of the app
       routes: {
         "/": (context) =>
             LoginPage(), //does the same work as home: Homepage(), this is object of class HomePage(), can also use new
