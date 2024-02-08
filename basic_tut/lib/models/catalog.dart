@@ -1,4 +1,4 @@
-class CatalogModel{
+class CatalogModel {
 
   static final items = [
   Item(
